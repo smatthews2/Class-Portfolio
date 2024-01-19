@@ -1,0 +1,23 @@
+The following is an excerpt from Cryptonomicon, a novel by Neal Stephenson, written in 1999:
+
+"Students were not allowed to touch the organ until they were proficient at the piano, and when this was explained to Lawrence Pritchard Waterhouse,
+he taught himself, in three weeks, how to play a Bach fugue, and signed up for organ lessons. Since he was only five years old at the time,
+he was unable to reach both the manuals and the pedals, and had to play standing-or rather strolling, from pedal to pedal.
+
+When Lawrence was twelve, the organ broke down. That paper mill family had not left any endowment for maintenance, so the math teacher decided to have
+a crack at it. He was in poor health and required a nimble assistant: Lawrence, who helped him open up the hood of the thing.
+
+For the first time in all those years, the boy saw what had been happening when he had been pressing those keys.
+
+For each stop-each timbre, or type of sound, that the organ could make (viz. blockflote, trumpet, piccolo)-there was a separate row of pipes,
+arranged in a line from long to short. Long pipes made low notes, short high. The tops of the pipes defined a graph: not a straight line but an
+upwardtending curve. The organist/math teacher sat down with a few loose pipes, a pencil, and paper, and helped Lawrence figure out why. When Lawrence
+understood, it was as if the math teacher had suddenly played the good part of Bach's Fantasia and Fugue in G Minor on a pipe organ the size of the
+Spiral Nebula in Andromeda-the part where Uncle Johann dissects the architecture of the Universe in one merciless descending ever-mutating chord, as if
+his foot is thrusting through skidding layers of garbage until it finally strikes bedrock. In particular, the final steps of the organist's explanation
+were like a falcon's dive through layer after layer of pretense and illusion, thrilling or sickening or confusing depending on what you were. The heavens
+were riven open. Lawrence glimpsed choirs of angels ranking off into geometrical infinity."
+
+Cryptonomicon combines fictional characters with Stephenson's take on actual historical individuals, like Alan Turing, and tells its story across two
+generations simultaneously, linking the lives of those living during World War II and those living in the 'present' (the 1990's).
+It is a tale of ciphers, the people who write them, and the people who break them.

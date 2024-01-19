@@ -1,0 +1,95 @@
+/* Author: Sebastian Matthews
+    CPSC 122 01 Project 3: Practice with Arrays
+    Jan 27, 2022
+    Gonzaga University
+    This program changes two integer strings into ints, multiplying the two by each other and placing the product into a file.
+    To run, write: "./a.out [int a] [int b] [file name]".
+*/
+
+#include <iostream>
+#include <fstream>
+#include <cctype> // For isdigit().
+#include <string.h>
+using namespace std;
+
+int atoiMy(char*);
+void writeToFile(int, int, string);
+void error(int);
+
+int main(int numArgs, char* arrayArgs[]){
+    
+    // Below is a series of error conditions that may trigger before we call our functions with incorrect values.
+    if(numArgs != 4){
+        error(1);
+    }
+    if(arrayArgs[1][0] == '-' && isdigit(arrayArgs[1][1]) == false && arrayArgs[2][0] == '-' && isdigit(arrayArgs[2][1]) == false){
+        error(4);
+    }
+    if(arrayArgs[1][0] != '-' && isdigit(arrayArgs[1][0]) == false && arrayArgs[2][0] != '-' && isdigit(arrayArgs[2][0]) == false){
+        error(4);
+    }
+    if(arrayArgs[1][0] == '-' && isdigit(arrayArgs[1][1]) == false){
+        error(2);
+    }
+    if(arrayArgs[1][0] != '-' && isdigit(arrayArgs[1][0]) == false){
+        error(2);
+    }
+    if(arrayArgs[2][0] == '-' && isdigit(arrayArgs[2][1]) == false){
+        error(3);
+    }
+    if(arrayArgs[2][0] != '-' && isdigit(arrayArgs[2][0]) == false){
+        error(3);
+    }
+
+    writeToFile(atoiMy(arrayArgs[1]), atoiMy(arrayArgs[2]), arrayArgs[3]);
+}
+
+// This function serves the purpose of "atoi", which turns a c-string into an integer.
+int atoiMy(char inArray[]){
+    // Initialize result, index of first digit, and sign, making sign positive.
+    int res = 0, sign = 1, i = 0;
+
+    // If negative input, change the sign.
+    if(inArray[i] == '-'){
+        sign = -1;
+        i++; // Move index of first digit.
+    }
+
+    // We iterate through all characters of the input string and update result, take ASCII character of corresponding digit and
+    // subtract the code from '0' to get numerical the value and multiply res by 10 to shuffle digits left to update running total.
+    for (i; inArray[i] != '\0'; ++i){
+        res = res * 10 + inArray[i] - '0';
+    }
+
+    // Return the result with proper signage.
+    return sign * res;
+}
+
+// This function writes the product of two integers to a given file.
+void writeToFile(int atoiResult, int atoiOtherResult, string fileName){
+    ofstream outFile;
+    
+    outFile.open(fileName);
+    outFile << atoiResult * atoiOtherResult;
+    
+    outFile.close();
+}
+
+// This function tells the user what they inputted incorrectly.
+void error(int x){
+    switch(x){
+        case 1:
+            cout << "Insufficient number of arguments.\n";
+            exit(EXIT_FAILURE);
+        case 2:
+            cout << "First value not integer.\n";
+            exit(EXIT_FAILURE);
+        case 3:
+            cout << "Second value not integer.\n";
+            exit(EXIT_FAILURE);
+        case 4:
+            cout << "Both values not integers.\n";
+            exit(EXIT_FAILURE);
+    }
+
+}
